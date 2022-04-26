@@ -1,0 +1,12 @@
+textarea {
+    width: 100%;
+    height: 10vh;
+}
+
+.blue {
+    background-color: aqua;
+}
+
+.red {
+    background-color: rgb(236, 129, 129);
+}

@@ -1,0 +1,11 @@
+.image {
+    size: 300px 300px;
+}
+
+.blue {
+    background-color: aqua;
+}
+
+.red {
+    background-color: rgb(236, 129, 129);
+}

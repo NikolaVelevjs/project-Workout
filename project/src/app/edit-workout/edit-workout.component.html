@@ -1,0 +1,44 @@
+<section class="py-5" id="offer-trip-page">
+    <div class="container offer-trip">
+        <h1>Edit Workout</h1>
+        <div>
+            <form method="POST">
+
+                <select name="select" id="select">
+                    <option value="chest">Chest</option>
+                    <option value="back">Back</option>
+                    <option value="arms">Arms</option>
+                    <option value="legs">Legs</option>
+                    <option value="abs">Abdominal muscles</option>
+                    <option value="ass">Ass</option>
+                    <option value="upperBody">Upper Body</option>
+                    <option value="shoulders">Shoulders</option>
+                    <option value="lowerBody">Lower Body</option>
+                </select>
+                <div>
+                    <input type="radio" id="radio" name="drone" value="man" checked>
+                    <label for="man">This workout is for man</label>
+                </div>
+                <input class="title " type="submit " id="exercise" placeholder="Title" name="title">
+                <input (change)="show($event)" class="exercisesLength " type="submit " id="exercise" placeholder="How many exercise" name="exercisesLength">
+                <div>
+                    <input type="radio" id="radio" name="drone" value="woman">
+                    <label for="woman">This workout is for woman</label>
+                </div>
+                <select name="select" id="difficulty">
+                    <option value="begginers">Begginers</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="killer-workout">Killer workout</option>
+                </select>
+
+
+
+            </form>
+            <div class="form-group ">
+                <label for="description ">Description</label>
+                <textarea [(ngModel)]="description " class="form-control " id="description " placeholder="Information about the workout " name="description "></textarea>
+            </div>
+            <button type="submit " class="btn btn-primary " (click)="addWorkout($event)">Vinish</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<h3>{{diet.title}}</h3>
+<div *ngIf="diet.email == userEmail">
+    <button (click)="editWorkout()">Edit</button>
+    <button (click)="deleteWorkout()">Delete</button>
+
+</div>
+<div *ngIf="diet.email != userEmail && isLogged != null">
+    <div *ngIf="!diet.likedBy.includes(userEmail)">
+        <button (click)="like()" class="blue">Like</button>
+    </div>
+    <div *ngIf="diet.likedBy.includes(userEmail)">
+        <button (click)="like()" class="red">You already liked that</button>
+    </div>
+</div>
+
+<div class="diets"></div>
+
+<textarea readonly="yes" id="" cols="150" rows="3" style="resize:none">{{diet.description}}</textarea>

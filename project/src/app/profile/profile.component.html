@@ -1,0 +1,45 @@
+<body>
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="card p-3">
+            <div class="d-flex align-items-center">
+                <div class="ml-3 w-100">
+                    <h4 class="mb-0 mt-0">{{username}}</h4> <span>{{email}}</span>
+                    <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                        <div class="d-flex flex-column"> <span class="articles">Workouts</span> <span class="number1">{{workouts.length}}</span> </div>
+
+                    </div>
+                    <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">Chat</button> <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <div id="fdw-pricing-table" *ngIf="workouts.length > 0">
+                <div class="plan plan1" *ngFor="let workout of workouts">
+                    <div class="header">
+                        <a href="/workout/{{workout._id}}">{{workout.title}}</a></div>
+                    <div class="likes">likes: {{workout.likes}}</div>
+                    <div class="program">{{workout.program}}</div>
+
+
+                    <ul><b>{{workout.difficulty}}</b></ul>
+                    <ul><b>{{workout.gender}}</b></ul>
+
+
+
+                </div>
+            </div>
+            <h1 *ngIf="workouts.length == 0">
+                You dont have published any workouts
+
+                <ul><a href="/createWorkout">Go to Create Workout</a></ul>
+
+            </h1>
+        </header>
+
+
+    </div>
+</body>

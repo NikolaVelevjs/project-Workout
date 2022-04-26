@@ -1,0 +1,36 @@
+<section class="py-5" id="offer-trip-page">
+    <div class="container offer-trip">
+        <h1>Edit Diet</h1>
+        <div>
+            <form method="POST">
+
+                <select name="select" id="select">
+                    <option value="1000-1500">1000-1500 Calories</option>
+                    <option value="1500-2000">1500-2000 Calories</option>
+                    <option value="2000-2500">2000-2500 Calories</option>
+                    <option value="2500-3000">2500-3000 Calories</option>
+                    <option value="3000-4000">3000-4000 Calories</option>
+                    <option value="4000+">4000+ Calories</option>
+                </select>
+                <div>
+                    <input type="radio" id="radio" name="drone" value="man" checked>
+                    <label for="man">This workout is for man</label>
+                </div>
+                <div>
+                    <input type="radio" id="radio" name="drone" value="woman">
+                    <label for="woman">This workout is for woman</label>
+                </div>
+                <input class="title " type="submit " id="exercise" placeholder="Title" name="title">
+                <input (change)="show($event)" class="exercisesLength " type="submit " id="exercise" placeholder="How many meals" name="exercisesLength">
+
+
+
+            </form>
+            <div class="form-group ">
+                <label for="description ">Description</label>
+                <textarea [(ngModel)]="description " class="form-control " id="description " placeholder="Information about the diet " name="description "></textarea>
+            </div>
+            <button type="submit " class="btn btn-primary " (click)="addDiet($event)">Vinish</button>
+        </div>
+    </div>
+</section>

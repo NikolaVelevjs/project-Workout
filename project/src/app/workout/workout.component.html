@@ -1,0 +1,18 @@
+<h3>{{workout.title}}</h3>
+<div *ngIf="workout.email == userEmail">
+    <button (click)="editWorkout()">Edit</button>
+    <button (click)="deleteWorkout()">Delete</button>
+
+</div>
+<div *ngIf="workout.email != userEmail && isLogged != null">
+    <div *ngIf="!workout.likedBy.includes(userEmail)">
+        <button (click)="like()" class="blue">Like</button>
+    </div>
+    <div *ngIf="workout.likedBy.includes(userEmail)">
+        <button (click)="like()" class="red">You already liked that</button>
+    </div>
+</div>
+
+<div class="exercises"></div>
+
+<textarea readonly="yes" id="" cols="150" rows="3" style="resize:none">{{workout.description}}</textarea>
